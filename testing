@@ -1,0 +1,207 @@
+
+
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <base href="http://admin.talentscan.tv/" />
+    <title>Talent Scan</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+    <link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.cyan-light_blue.min.css">
+	  <link rel="stylesheet" href="css/bootstrap.min.css">
+	  <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="css/styles.css">
+	  <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+	<script>
+	 var expanded = false;
+    function showCheckboxes(count) {
+        var checkboxes = $('.checkboxes'+count).attr('class');
+        if (expanded) {
+            $('.checkboxes'+count).show();
+            expanded = false;
+        } else {
+            $('.checkboxes'+count).hide();
+            expanded = true;
+        }
+    }
+
+    function ConfirmDelete() {
+      return confirm("Are you sure you want to delete?");
+    }
+	</script>
+
+  </head>
+  <body>
+
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div style="width: 80%; float: left;"class="mdl-layout__header-row">
+		      <br/>
+          <span class="mdl-layout-title"><img src="images/logo.jpg" style="width: 50px; height: 50px; border-radius: 30px;"/><span style="margin-left: 0%;">Dashboard</span></span>
+
+        </div>
+
+              </header>
+      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        <header class="demo-drawer-header">
+          <img src="images/logo.jpg" class="demo-avatar">
+          <div class="demo-avatar-dropdown">
+            <h5>Mario Jansen<br/></h5>
+			      <br/>
+		     </div>
+		     <h5><a href="logout">Logout</a></h5>
+        </header>
+
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+          <a class="mdl-navigation__link" href="dashboard"><i class="material-icons">&#xE88A;</i>Dashboard</a>
+<a class="mdl-navigation__link" href="jobs/add"><i class="material-icons">&#xE070;</i>Create Job</a>
+
+<a class="mdl-navigation__link" href="talents/register"><i class="material-icons">&#xE87C;</i>Register Talent</a>
+<a class="mdl-navigation__link" href="talents"><i class="material-icons">&#xE8F4;</i>View Talents</a>
+
+<a class="mdl-navigation__link" href="roles/add"><i class="material-icons">&#xE404;</i>Register Role</a>
+<a class="mdl-navigation__link" href="roles"><i class="material-icons">&#xE43A;</i>View Roles</a>
+
+<a class="mdl-navigation__link" href="locations/add"><i class="material-icons">&#xE567;</i>Register Location</a>
+<a class="mdl-navigation__link" href="locations"><i class="material-icons">&#xE568;</i>View Locations</a>
+
+  <hr/>
+  <h5 style="padding: 5%;">Super User Menu</h5>
+  <a class="mdl-navigation__link" href="jobs/all"><i class="material-icons">&#xE8F9;</i>All Jobs</a>
+  <a class="mdl-navigation__link" href="talents/all"><i class="material-icons">&#xE566;</i>All Talents</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+			    
+	
+		<div class="col-sm-4">
+			<div class="box" style="margin-bottom: 5%">
+	    	<a href="jobs/2/runlists">
+					<img src="cdn/images/524e1f1bcb6950326dd0b18be554afb8.png" style="width: 100%; height: 250px;  object-fit: contain;"/>
+					<h3 align="center">Lima</h3>
+				</a>
+
+				<h2 align="center">
+
+										<a title="edit job" href="jobs/edit/2"><i class="material-icons">&#xE254;</i></a>
+					
+					<a title="add runlist to job" href="runlists/add/2"><i class="material-icons">&#xE89C;</i></a>
+
+											<form action="dashboard" method="POST" >
+            	<input type="hidden" name="selected" value="0" />
+            	<button onClick="return ConfirmDelete()" type="submit" name="delete-job-submit">
+              	<i style="color: red;" class="material-icons">&#xE92B;</i>
+            	</button>
+          	</form>
+									</h2>
+			</div>
+	</div>
+	
+		<div class="col-sm-4">
+			<div class="box" style="margin-bottom: 5%">
+	    	<a href="jobs/3/runlists">
+					<img src="cdn/images/21ba3992e3eb177a0b125bc213fcd379.png" style="width: 100%; height: 250px;  object-fit: contain;"/>
+					<h3 align="center">Saigon</h3>
+				</a>
+
+				<h2 align="center">
+
+										<a title="edit job" href="jobs/edit/3"><i class="material-icons">&#xE254;</i></a>
+					
+					<a title="add runlist to job" href="runlists/add/3"><i class="material-icons">&#xE89C;</i></a>
+
+											<form action="dashboard" method="POST" >
+            	<input type="hidden" name="selected" value="1" />
+            	<button onClick="return ConfirmDelete()" type="submit" name="delete-job-submit">
+              	<i style="color: red;" class="material-icons">&#xE92B;</i>
+            	</button>
+          	</form>
+									</h2>
+			</div>
+	</div>
+	
+		<div class="col-sm-4">
+			<div class="box" style="margin-bottom: 5%">
+	    	<a href="jobs/4/runlists">
+					<img src="cdn/images/385c080626af89e651207aad843b655e.jpg" style="width: 100%; height: 250px;  object-fit: contain;"/>
+					<h3 align="center">Show & Tell</h3>
+				</a>
+
+				<h2 align="center">
+
+										<a title="edit job" href="jobs/edit/4"><i class="material-icons">&#xE254;</i></a>
+					
+					<a title="add runlist to job" href="runlists/add/4"><i class="material-icons">&#xE89C;</i></a>
+
+											<form action="dashboard" method="POST" >
+            	<input type="hidden" name="selected" value="2" />
+            	<button onClick="return ConfirmDelete()" type="submit" name="delete-job-submit">
+              	<i style="color: red;" class="material-icons">&#xE92B;</i>
+            	</button>
+          	</form>
+									</h2>
+			</div>
+	</div>
+	        </div>
+      </main>
+    </div>
+	<script src="js/material.js"></script>
+  </body>
+</html>
